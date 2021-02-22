@@ -1,0 +1,87 @@
+header{
+	background-color: #fbd601;
+	text-align: center;
+}
+body{
+	background-color: #fbd601; 
+}
+#logo{
+	width: 30%;
+	height: auto;
+}
+#container{
+	font-size: 20px;
+	margin-right: 10%;
+	margin-left: 10%;
+	text-align: center;
+}
+#questionmark{
+	width: 50%;
+	height: auto;
+}
+.text{
+	font-weight: bold;
+}
+.central{
+	margin-left: 10%;
+	margin-right: 10%;
+}
+.textInput{
+	border: 3px solid #ed9738;
+	border-radius: 10px;
+	padding: 5px;
+	font-size: 25px;
+	background-color: #fbd601;
+	text-align: center;
+	margin: 1%;
+	transition: all 1s;
+	width: 40%;
+}
+.textInput:hover{
+	box-shadow: 0px 0px 10px 10px #ed9738;
+	background-color: #ed9738;
+	border-color: #fbd601;
+}
+.allButtons{
+	font-size: 25px;
+	border: 3px solid #ed9738;
+	border-radius: 10px;
+	background-color: #fbd601;
+	transition: all 0.5s;
+}
+.allButtons:hover{
+	box-shadow: 0px 0px 10px 10px #ed9738;
+	background-color: #ed9738;
+	border-color: #fbd601;
+	transform: scale(1.5);
+}
+#currentUser{
+	font-size: 20px;
+	text-align: right;
+	margin-right: 5%;
+}
+#code{
+	width: 90%;
+	height: auto;
+}
+.arrayElementInput{
+	width: 5%;
+	border: 3px solid #ed9738;
+	border-radius: 10px;
+	padding: 5px;
+	font-size: 25px;
+	background-color: #fbd601;
+	text-align: center;
+	margin: 1%;
+	transition: all 1s;
+}
+.arrayElementInput:hover{
+	box-shadow: 0px 0px 10px 10px #ed9738;
+	background-color: #ed9738;
+	border-color: #fbd601;
+}
+.test{
+	text-align: left;
+	margin-left: 10%;
+	margin-right: 10%;
+}

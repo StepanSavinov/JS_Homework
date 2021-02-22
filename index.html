@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Для новичков</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width", initial-scale=1>
+
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+
+    <script type="text/javascript" src="scripts/script.js"></script>
+</head>
+<body>
+
+	<header>
+		<img id="logo" src="images/java-script1.jpg"><hr color=black>
+		<div id="currentUser"></div>
+	</header>
+
+	<div id="container">
+		<div class="central">
+			<p class="text">
+				JavaScript это кросс-платформенный, объектно-ориентированный, скриптовый язык.
+			</p>
+        	<p class="text">
+         	JavaScript - это маленький и легковесный язык; он спроектирован не для создания законченных, полноценных приложений, а для легкого встраивания в другие продукты и приложения, например, в веб браузеры.
+     		</p>
+     		<p style="font-weight: bolder">
+     			Давйте копнем в javascript поглубже и разберемся как он работает!
+     		</p>
+     		<p>
+     			<img id="questionmark" src="images/js-questionmark.jpg">
+     		</p>
+     	</div>
+     	<div class="central" id="introduction">
+     		<p class="text">Самое главное, с чего мы начинаем наше программирование на JavaScript - подключение самого файла скрипта .js к нашему HTML файлу
+     		</p>
+
+     		<p class="text">
+     			Чтобы это сделать, нам нужно внутри тега head добавить строчку, в которой указан путь к нашему файлу .js:
+     		</p>
+
+     		<p><img id="code" src="images/script.png"></p>
+
+     		<p class="text">
+     			Теперь можно познакомиться поближе!
+     		</p>
+     		<p>
+     			<input type="text" name="name" id="username" class="textInput" placeholder="Как вас зовут?">
+     		</p>
+     		<p>
+     			<button class="allButtons" onclick="acquaintance()">Приятно познакомиться!</button>
+     		</p>
+     	</div>
+
+        <div class="central" id="triangle">
+            <p class="text">Посчитаем площадь треугольника.</p>
+
+            <input type="text" name="triangle" id="a" class="textInput" placeholder="Основание треугольника"><br>
+
+            <input type="text" name="triangle" id="h" class="textInput" placeholder="Высота треугольника"><br>
+
+            <button class="allButtons" onclick="countTriangleS()">
+                Посчитать
+            </button><br>
+        </div>
+        <div class="central" id="strings">
+            <p class="text">Сравним две введенные вами строки</p>
+
+            <input type="text" name="string" id="firstString" class="textInput">
+
+            <input type="text" name="string" id="secondString" class="textInput">
+
+            <button class="allButtons" onclick="compareStrings()">Сравнить строки</button>
+        </div>
+        <div class="central" id="array">
+            <p class="text">Введите элементы массива и мы найдем максимальный и минимальный элементы</p>
+            <input type="text" name="arrayElement" class="arrayElementInput" id="0">
+            <input type="text" name="arrayElement" class="arrayElementInput" id="1">
+            <input type="text" name="arrayElement" class="arrayElementInput" id="2">
+            <input type="text" name="arrayElement" class="arrayElementInput" id="3">
+            <input type="text" name="arrayElement" class="arrayElementInput" id="4">
+
+            <button class="allButtons" onclick="arrayElements()">Найти</button><br>
+        </div>
+        <div class="central">
+            <form name=MyForm>
+                <input type=button value="Обнулить" onclick="ClearСlock()" class="allButtons">  
+                <input name=stopwatch size=10 value="00:00:00.00" class="textInput">  
+                <input type=button value="Запуск/Остановить" onclick="StartStop()" class="allButtons">
+            </form>
+        </div>
+        <div id="1stQuestion" class="test">
+            <p class="text">Небольшой тест по JavaScript</p>
+            <p class="text">1. JavaScript интерпретируемый или компилируемый?</p>
+            <input type="radio" id="wrongAnswer1" name="1stQuestion">
+            <label for="wrongAnswer1">Компилируемый</label><br>
+            <input type="radio" id="correctAnswer1" name="1stQuestion">
+            <label for="correctAnswer1">Интерпретируемый</label>
+        </div>
+        <div id="2ndQuestion" class="test">
+            <p class="text">2. Как мы подключаем JavaScript к нашему сайту?</p>
+            <input type="radio" id="correctAnswer2" name="2ndQuestion">
+            <label for="correctAnswer2">Через тэг script</label><br>
+            <input type="radio" id="wrongAnswer2" name="2ndQuestion">
+            <label for="wrongAnswer2">Через тэг link</label>
+        </div>
+        <div id="3rdQuestion" class="test">
+            <p class="text">3. В чем разница между null и undefined?</p>
+            <input type="radio" id="wrongAnswer3.1" name="3rdQuestion">
+            <label for="wrongAnswer3.1">Ничем</label><br>
+            <input type="radio" id="wrongAnswer3.2" name="3rdQuestion">
+            <label for="wrongAnswer3.2">При создании переменной и присваивания ей null, она ничего в себе не хранит, а в случае присваивания undefined, она хранит 0</label><br>
+            <input type="radio" id="correctAnswer3" name="3rdQuestion">
+            <label for="correctAnswer3">При создании переменной и присваивания ей undefined, она ничего в себе не хранит, а в случае присваивания null, она хранит 0</label>
+        </div>
+        <div id="4thQuestion" class="test">
+            <p class="text">4. Чем отличается оператор '=='' от '==='?</p>
+            <input type="radio" id="wrongAnswer4.1" name="4thQuestion">
+            <label for="wrongAnswer4.1">Количеством знаков '='</label><br>
+            <input type="radio" id="correctAnswer4" name="4thQuestion">
+            <label for="correctAnswer4">Оператор '==' отличается тем, что он сравнивает значения после их преобразования или приведения к одному типу</label><br>
+            <input type="radio" id="wrongAnswer4.2" name="4thQuestion">
+            <label for="wrongAnswer4.2">Оператор '===' отличается тем, что он сравнивает значения после их преобразования или приведения к одному типу</label>
+        </div>
+        <div id="5thQuestion" class="test">
+            <p class="text">5. В каком году был создан JavaScript?</p>
+            <input type="radio" id="correctAnswer5" name="5thQuestion">
+            <label for="correctAnswer5">1995</label><br>
+            <input type="radio" id="wrongAnswer5.1" name="5thQuestion">
+            <label for="wrongAnswer5.1">1990</label><br>
+            <input type="radio" id="wrongAnswer5.2" name="5thQuestion">
+            <label for="wrongAnswer5.2">2000</label><br>
+            <input type="radio" id="wrongAnswer5.3" name="5thQuestion">
+            <label for="wrongAnswer5.3">2005</label>
+        </div>
+        <div id="6thQuestion" class="test">
+            <p class="text">6. Кто изобрел JavaScript?</p>
+            <input type="radio" id="correctAnswer6" name="6thQuestion">
+            <label for="correctAnswer6">Брейдан Эйх</label><br>
+            <input type="radio" id="wrongAnswer6.1" name="6thQuestion">
+            <label for="wrongAnswer6.1">Томас Эдисон</label><br>
+            <input type="radio" id="wrongAnswer6.2" name="6thQuestion">
+            <label for="wrongAnswer6.2">Джеймс Гослинг</label><br>
+            <input type="radio" id="wrongAnswer6.3" name="6thQuestion">
+            <label for="wrongAnswer6.3">Бьёрн Страуструп</label>
+        </div>
+        <div id="7thQuestion" class="test">
+            <p class="text">7. Что общего у Java и JavaScript?</p>
+            <input type="radio" id="wrongAnswer7.1" name="7thQuestion">
+            <label for="wrongAnswer7.1">Создатель</label><br>
+            <input type="radio" id="wrongAnswer7.2" name="7thQuestion">
+            <label for="wrongAnswer7.2">Это одно и то же</label><br>
+            <input type="radio" id="correctAnswer7" name="7thQuestion">
+            <label for="correctAnswer7">Ничего</label>
+        </div>
+        <div id="8thQuestion" class="test">
+            <p class="text">8. В какой сфере преимущественно используется JavaScript?</p>
+            <input type="radio" id="correctAnswer8" name="8thQuestion">
+            <label for="correctAnswer8">Веб приложения</label><br>
+            <input type="radio" id="wrongAnswer8.1" name="8thQuestion">
+            <label for="wrongAnswer8.1">Windows приложения</label><br>
+            <input type="radio" id="wrongAnswer8.2" name="8thQuestion">
+            <label for="wrongAnswer8.2">Мобильные приложения</label>
+        </div>
+        <div id="9thQuestion" class="test">
+            <p class="text">9. Как изначально назывался JavaScript?</p>
+            <input type="radio" id="wrongAnswer9.1" name="9thQuestion">
+            <label for="wrongAnswer9.1">TypeScript</label><br>
+            <input type="radio" id="wrongAnswer9.2" name="9thQuestion">
+            <label for="wrongAnswer9.2">WebScript</label><br>
+            <input type="radio" id="correctAnswer9" name="9thQuestion">
+            <label for="correctAnswer9">LiveScript</label>
+        </div>
+        <div id="10thQuestion" class="test">
+            <p class="text">10. Какое расширение имеют файлы с кодом JavaScript?</p>
+            <input type="radio" id="wrongAnswer10.1" name="10thQuestion">
+            <label for="wrongAnswer10.1">.jvs</label><br>
+            <input type="radio" id="wrongAnswer10.2" name="10thQuestion">
+            <label for="wrongAnswer10.2">.jsc</label><br>
+            <input type="radio" id="correctAnswer10" name="10thQuestion">
+            <label for="correctAnswer10">.js</label><br>
+            <input type="radio" id="wrongAnswer10.3" name="10thQuestion">
+            <label for="wrongAnswer10.3">.script</label>
+        </div>
+        <div id="check" class="central">
+            <button class="allButtons" onclick="testAnswers()">Проверить ответы</button><br>
+        </div>
+        <div id="mistakes" class="central"></div>
+        <div id="screensaver" class="central">
+            <button class="allButtons" onclick="screenSaver()">Запустить заставку</button>
+        </div>
+	</div>
+</body>
+</html>
